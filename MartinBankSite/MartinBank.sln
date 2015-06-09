@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartinBank.Entity", "Martin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartinBank.Core", "MartinBank.Core\MartinBank.Core.csproj", "{BE9740BE-A7C8-4E0F-A273-49C140154CA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartinBank.Data", "MartinBank.Data\MartinBank.Data.csproj", "{D7697D12-A966-4BD9-A620-58B0CD694C68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BE9740BE-A7C8-4E0F-A273-49C140154CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE9740BE-A7C8-4E0F-A273-49C140154CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE9740BE-A7C8-4E0F-A273-49C140154CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7697D12-A966-4BD9-A620-58B0CD694C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7697D12-A966-4BD9-A620-58B0CD694C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7697D12-A966-4BD9-A620-58B0CD694C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7697D12-A966-4BD9-A620-58B0CD694C68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace MartinBank.Core
+namespace MartinBank.Core.Utils
 {
     public class ChequeConverter
     {

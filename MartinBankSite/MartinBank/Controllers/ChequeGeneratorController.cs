@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Web.Mvc;
-using MartinBank.Core;
+using MartinBank.Core.Interfaces;
+using MartinBank.Core.Utils;
 using MartinBank.Web.Models;
 
 namespace MartinBank.Web.Controllers
 {
     public class ChequeGeneratorController : Controller
     {
+        private readonly ILoggingService _logginService;
+        private readonly IWebConfigurationSettings _webConfigurationSettings;
+
+        public ChequeGeneratorController(ILoggingService logginService, IWebConfigurationSettings webConfigurationSettings)
+        {
+            _logginService = logginService;
+            _webConfigurationSettings = webConfigurationSettings;
+        }
+
         public ActionResult Index()
         {
             var model = new ChequeViewModel
             {
-                BankName = "MartinBank - Cheque",
+                BankName = _webConfigurationSettings.GetBankName(),
                 DateAsString = DateTime.UtcNow.ToString("dd-MMM-yyyy"),
                 Amount = 0d
             };
@@ -34,7 +44,7 @@ namespace MartinBank.Web.Controllers
             }
             catch (Exception ex)
             {
-                // Assumption: Use of LogginService for record any logs  
+                _logginService.Error("Something wrong happened!", ex);
             }
 
             // assumption: Error can be set via resource file or database error codes.

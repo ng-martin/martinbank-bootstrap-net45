@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE9740BE-A7C8-4E0F-A273-49C140154CA9}</ProjectGuid>
+    <ProjectGuid>{D7697D12-A966-4BD9-A620-58B0CD694C68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MartinBank.Core</RootNamespace>
-    <AssemblyName>MartinBank.Core</AssemblyName>
+    <RootNamespace>MartinBank.Data</RootNamespace>
+    <AssemblyName>MartinBank.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,18 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IWebConfigurationSettings.cs" />
-    <Compile Include="Services\WebConfigurationSettings.cs" />
-    <Compile Include="Utils\ChequeConverter.cs" />
-    <Compile Include="Interfaces\ILoggingService.cs" />
+    <Compile Include="Interfaces\ILoggingRepository.cs" />
+    <Compile Include="Repositories\LoggingRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\LoggingService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MartinBank.Data\MartinBank.Data.csproj">
-      <Project>{D7697D12-A966-4BD9-A620-58B0CD694C68}</Project>
-      <Name>MartinBank.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
